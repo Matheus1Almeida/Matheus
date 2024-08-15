@@ -1,0 +1,277 @@
+Professor, vou ser extremamente sincero com vc, eu tentei ao maximo realizar este trabalho com minhas capacidades, admito que usei um pouco do chat gpt para isso.
+
+Esse trabalho nao roda, ele possui uma serie de erros, porem nao usei a internet para fazer para mim.
+
+Espero que possa fazer um trabalho para melhorar minha nota.
+
+
+#include <stdio.h>
+
+double adicao();
+double subtracao();
+double multiplicacao();
+double divisao();
+double potenciacao();
+double radiciacao();
+double fatoracao();
+double MDC();
+double MMC();
+double Equacao;
+
+double raizQuadrada(double l) {
+    double precisao = 0.00001;  
+
+    while ((raiza - l / raiza) > precisao) {
+        raiza = (raiza + l / raiza) / 2;
+    }
+
+}
+
+double MDC(double w, double x) {
+    while (x != 0) {
+        int temp = x;
+        x = w % x;
+        w = temp;
+    }
+   
+}
+
+double MMC(double y, double z) {
+    return (y * z) / MDC(y, z);
+}
+
+double resolucao(double n1) {
+    double precisao = 0.00001;
+    double ceta = numero;
+
+    if (numero < 0) return -1;
+
+    while ((ceta - numero / ceta) > precisao) {
+        ceta = (ceta + numero / ceta) / 2;
+    }
+
+    return ceta;
+}
+
+int fatoracao;
+
+int main()
+{
+    int n1;
+    double a, b, c, d, e, f, g, h, j, k, m, n, o, p, q, op, xp, tp,  soma, menos, vezes, dividido, elevado, raiz, mdc, mmc, equacao, grau, equacao, resultado1, ceta, ceta1, ceta2, raiza, numero;
+    
+    printf("1-Adição. \n 2-Subtração. \n 3-Multiplicação. \n 4-Divisão. \n 5-Potencia. \n 6-Radiciação. \n 7-Fatoração. \n 8-MDC. \n 9-MMC. \n 10-Equação de Segundo Grau.");
+    
+    printf("\n \n Digite o número da operação que deseja");
+    scanf("%d",&n1);
+    
+    
+    switch (n1) {
+        
+        case '0':
+        printf("cancelado");
+        break;
+        
+        case 1: adicao(); 
+        break;
+        
+        case 2: subtracao();
+        break;
+        
+        case 3: multiplicacao(); 
+        break;
+        
+        case 4: divisao(); 
+        break;
+        
+        case 5: potenciacao();
+        break;
+        
+        case 6: radiciacao(); 
+        break;
+        
+        case 7: fatoracao(); 
+        break;
+       
+        case 8: MDC(); 
+        break;
+        
+        case 9: MMC(); 
+        break;
+        
+        case 10:Equacao(); 
+        break;
+        
+    }
+    return 0;
+    
+    
+}
+
+ double adicao()
+ {
+     double a, b, soma;
+     
+    printf("Digite o 1 numero");
+    scanf("%lf", &a);
+    printf("Digite o 2 numero");
+    scanf("%lf", &b);
+    
+    soma = a + b;
+    
+    printf("soma = %.5lf", soma);
+    
+    return soma;
+ }
+ 
+ double subtracao()
+ {
+     double c, d, menos;
+     printf("Digite o 1 numero");
+     scanf("%lf", &c);
+     printf("Digite o 2 numero");
+     scanf("%lf", &d);
+     
+     menos = c - d;
+     printf("resultado = %.5lf", menos);
+     
+     return menos;
+ }
+ 
+ double multiplicacao()
+ {
+    double e, f, vezes;
+    printf("Digite o 1 numero");
+     scanf("%lf", &e);
+     printf("Digite o 2 numero");
+     scanf("%lf", &f);
+     
+     vezes = e * f;
+     
+    printf("resultado = %.5lf", vezes);
+    
+    return vezes;
+     
+ }
+ 
+ double divisao()
+ {
+     double g, h, dividido;
+     printf("Digite o 1 numero");
+     scanf("%lf", &g);
+     printf("Digite o 2 numero");
+     scanf("%lf", &h);
+     
+     dividido = g / h;
+     
+     printf("resultado = %.5lf", dividido);
+     
+     return dividido;
+ }
+ 
+ double potenciacao()
+ {
+     double j, k;
+     double resultado1 = 1;
+     
+     printf("Digite o numero da base");
+     scanf("%lf", &j);
+     printf("Digite o numero do expoente");
+     scanf("%lf", &k);
+     
+     for(i = 0; i < k; i++)
+     {
+         resultado1 *= j;
+     }     
+     printf("o resultado1 = %d", resultado1)
+     return resultado1;
+     }
+
+ double radiciacao()
+ {
+     double l, raiz;
+     
+     printf("Digite o numero que deseje a raiz");
+     scanf("%lf", &l);
+     
+     if (l < 0) {
+        printf("Não é possível calcular a raiz quadrada de um número negativo.\n");
+    } else {
+        raiz = raizQuadrada(l);
+        printf("A raiz quadrada de %.5lf é %.5lf\n", l, raiz);
+    }
+    return raiz;
+}
+    double MDC()
+   { 
+    double m, n, mdc;
+    
+    printf("Digite o primeiro número");
+    scanf("%lf", &m);
+
+    printf("Digite o segundo número");
+    scanf("%lf", &n);
+
+    mdc = MDC(m, n);
+
+    printf("O MDC de %lf e %lf é: %lf\n", m, n, mdc);
+    
+    return mdc;
+   }
+     double MMC()
+     {
+         double o, p, mmc;
+         
+     printf("Digite o primeiro número: ");
+    scanf("%lf", &o);
+
+    printf("Digite o segundo número: ");
+    scanf("%lf", &p);
+
+    mmc =   MMC(o, p);
+
+    printf("O MMC de %lf e %lf é: %lf\n", o, p, mmc);
+
+    return mmc;
+}
+     
+     double Equacao()
+     {
+         double q, op, xp, tp, equacao;
+         
+         printf("Digite os coeficientes a, b e c da equação (ax^2 + bx + c = 0):\n");
+    printf("a ");
+    scanf("%lf", &op);
+    printf("b ");
+    scanf("%lf", &xp);
+    printf("c ");
+    scanf("%lf", &tp);
+    
+    if (op == 0) {
+        printf("O coeficiente 'a' deve ser diferente de 0 em uma equação de segundo grau.\n");
+        return 1;
+    }
+
+    delta = xp * xp - 4 * op * tp;
+
+    if (delta < 0) {
+        printf("A equação não possui raízes reais.\n");
+    } else {
+        double raizDelta = raizQuadrada(delta);
+
+        if (raizDelta == -1) {
+            printf("Erro no cálculo da raiz quadrada.\n");
+            return 1;
+        }
+        
+        ceta1 = (-b + raizDelta) / (2 * a);
+        ceta2 = (-b - raizDelta) / (2 * a);
+
+        printf("As raízes da equação são: %.5lf e %.5lf\n", raiz1, raiz2);
+    }
+
+    return 0;
+}
+     
+     
+     
